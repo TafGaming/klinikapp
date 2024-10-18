@@ -1,2 +1,2 @@
-#Tugas KlinikApp Thoriq Akhtar Febrian
-Dengan Welcome Login Home, Daftar Pasien dll
+## Pertemuan 11 - PoliApp
+Penambahan Poli beserta CRUD nya
