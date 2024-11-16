@@ -10,22 +10,18 @@
 </head>
 
 <body>
-    <!--  Body Wrapper -->
     <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
         data-sidebar-position="fixed" data-header-position="fixed">
-        <!-- Sidebar Start -->
         <aside class="left-sidebar">
-            <!-- Sidebar scroll-->
             <div>
                 <div class="brand-logo d-flex align-items-center justify-content-between">
                     <a href="." class="text-nowrap logo-img">
-                        <img src="/modern/src/assets/images/logos/webpro.png" width="180" alt="" />
+                        <img src="/modern/src/assets/images/logos/webpro.jpg" width="180" alt="" />
                     </a>
                     <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                         <i class="ti ti-x fs-8"></i>
                     </div>
                 </div>
-                <!-- Sidebar navigation-->
                 <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
                     <ul id="sidebarnav">
                         <li class="nav-small-cap">
@@ -41,13 +37,14 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/daftar" aria-expanded="false">
+                            <a class="sidebar-link {{ request()->is('daftar*') ? 'active' : '' }}" href="/daftar"
+                                aria-expanded="false">
                                 <span>
-                                    <i class="ti ti-clipboard"></i>
+                                    <i class="ti ti-user"></i>
                                 </span>
-                                <span class="hide-menu">Pendaftaran</span>
+                                <span class="hide-menu">Data Pendaftaran</span>
                             </a>
-                        </li>
+                        </li>                        
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="/pasien" aria-expanded="false">
                                 <span>
@@ -74,14 +71,9 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- End Sidebar navigation -->
             </div>
-            <!-- End Sidebar scroll-->
         </aside>
-        <!--  Sidebar End -->
-        <!--  Main wrapper -->
         <div class="body-wrapper">
-            <!--  Header Start -->
             <header class="app-header">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <ul class="navbar-nav">
@@ -140,7 +132,6 @@
                     </div>
                 </nav>
             </header>
-            <!--  Header End -->
             <div class="container-fluid">
                 @if (session()->has('pesan'))
                     <div class="alert alert-info" role="alert">
