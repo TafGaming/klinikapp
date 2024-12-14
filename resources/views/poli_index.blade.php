@@ -8,6 +8,10 @@
                     <div class="card-body">
                         <h3>Data Poli</h3>
                         <div class="row mb-3 mt-3">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" name="q" placeholder="CariPoli" value="{{ request('q') }}" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                              </form>
                             <div class="col-md-6">
                                 <a href="/poli/create" class="btn btn-primary btn-sm">Tambah Poli</a>
                             </div>

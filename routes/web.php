@@ -13,6 +13,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::middleware(['auth'])->group(function () {
 Route::resource('pasien', App\Http\Controllers\PasienController::class);
 Route::resource('poli', App\Http\Controllers\PoliController::class);
-ROute::resource('daftar', App\Http\Controllers\DaftarController::class);
+Route::resource('daftar', App\Http\Controllers\DaftarController::class);
 });
 

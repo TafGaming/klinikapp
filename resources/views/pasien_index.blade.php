@@ -8,7 +8,11 @@
                     <div class="card-body">
                         <h3>Data pasien</h3>
                         <div class="row mb-3 mt-3">
-                            <div class="col-md-6">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" name="q" placeholder="Cari Pasien" value="{{ request('q') }}" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                              </form>
+                            <div class="col-md-6 ">
                                 <a href="/pasien/create" class="btn btn-primary btn-sm">Tambah Pasien</a>
                             </div>
                         </div>
